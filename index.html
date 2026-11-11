@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kalluri Sabeela | Aspiring Software Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --blue: #1769d2;
+            --dark-blue: #102a43;
+            --light-blue: #eaf3ff;
+            --text: #263238;
+            --muted: #667085;
+            --white: #ffffff;
+            --border: #e6ebf2;
+            --shadow: 0 15px 45px rgba(16, 42, 67, 0.10);
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #ffffff;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+
+        /* ==============================
+           NAVBAR
+        ============================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #edf0f5;
+        }
+
+        .navbar {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 700;
+            color: var(--dark-blue);
+        }
+
+        .logo span {
+            color: var(--blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #344054;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            min-height: calc(100vh - 76px);
+            display: flex;
+            align-items: center;
+            padding: 80px 0 90px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: #edf5ff;
+            border-radius: 50%;
+            right: -180px;
+            top: 80px;
+            z-index: -1;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .hero-text {
+            animation: slideLeft 0.8s ease;
+        }
+
+        .small-title {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: var(--light-blue);
+            color: var(--blue);
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 6vw, 76px);
+            line-height: 1.05;
+            color: #12263a;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--blue);
+        }
+
+        .typing {
+            font-size: 23px;
+            font-weight: 700;
+            color: #243b53;
+            min-height: 35px;
+            margin-bottom: 15px;
+        }
+
+        .typing span {
+            color: var(--blue);
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 13px 21px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--dark-blue);
+            color: white;
+            box-shadow: 0 8px 20px rgba(16, 42, 67, 0.18);
+        }
+
+        .btn-primary:hover {
+            background: var(--blue);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border-color: #d8dee8;
+            background: white;
+            color: #243b53;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--blue);
+            color: var(--blue);
+            transform: translateY(-3px);
+        }
+
+
+        /* ==============================
+           PROFILE
+        ============================== */
+
+        .profile-area {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 55px;
+            position: relative;
+            animation: slideRight 0.9s ease;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            width: 390px;
+            height: 390px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-wrapper::before {
+            content: "";
+            position: absolute;
+            width: 390px;
+            height: 390px;
+            border-radius: 50%;
+            border: 2px solid #dcecff;
+        }
+
+        .profile-wrapper::after {
+            content: "";
+            position: absolute;
+            width: 370px;
+            height: 370px;
+            border-radius: 50%;
+            border: 5px solid var(--blue);
+            box-shadow:
+                0 0 0 8px rgba(23, 105, 210, 0.08),
+                0 20px 50px rgba(23, 105, 210, 0.18);
+        }
+
+        .profile-image {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            background: #dff3f7;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 24%;
+            transform: scale(1.08);
+            transition: transform 0.5s ease;
+        }
+
+        .profile-wrapper:hover .profile-image img {
+            transform: scale(1.13);
+        }
+
+        .location-badge {
+            position: absolute;
+            z-index: 5;
+            bottom: 12px;
+            right: -20px;
+            background: white;
+            padding: 12px 18px;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            font-size: 13px;
+            font-weight: 700;
+            color: #344054;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .location-badge i {
+            color: var(--blue);
+        }
+
+        .floating-dot {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background: var(--blue);
+            border-radius: 50%;
+            right: -15px;
+            top: 55px;
+            box-shadow: 0 0 0 9px rgba(23, 105, 210, 0.08);
+            animation: floating 3s ease-in-out infinite;
+            z-index: 6;
+        }
+
+
+        /* ==============================
+           SECTION
+        ============================== */
+
+        section {
+            padding: 95px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title .tag {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+            color: #12263a;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            max-width: 650px;
+            margin: 10px auto 0;
+        }
+
+
+        /* ==============================
+           ABOUT
+        ============================== */
+
+        .about {
+            background: #f8fbff;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .about-card h3 {
+            font-size: 24px;
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .quick-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info-box {
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            background: white;
+        }
+
+        .info-box i {
+            color: var(--blue);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .info-box h4 {
+            color: var(--dark-blue);
+            font-size: 15px;
+        }
+
+        .info-box p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+
+        /* ==================================================
+           TECHNOLOGIES / SKILLS
+           COLORFUL SYMBOLS
+        ================================================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            padding: 28px 20px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: white;
+            text-align: center;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            top: -45px;
+            right: -35px;
+            opacity: 0.08;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 18px 40px rgba(16, 42, 67, 0.13);
+        }
+
+        /*
+           COLORFUL TECHNOLOGY ICONS
+        */
+
+        .skill-icon {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 16px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            transition: 0.35s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .skill-card:hover .skill-icon {
+            transform: scale(1.12) rotate(-4deg);
+        }
+
+        /* Java */
+
+        .java-icon {
+            color: #ed2024;
+            background: #fff0f0;
+        }
+
+        .java-card::before {
+            background: #ed2024;
+        }
+
+
+        /* Database */
+
+        .db-icon {
+            color: #00758f;
+            background: #e7f8fc;
+        }
+
+        .db-card::before {
+            background: #00758f;
+        }
+
+
+        /* HTML */
+
+        .html-icon {
+            color: #e44d26;
+            background: #fff0eb;
+        }
+
+        .html-card::before {
+            background: #e44d26;
+        }
+
+
+        /* CSS */
+
+        .css-icon {
+            color: #1572b6;
+            background: #eaf5ff;
+        }
+
+        .css-card::before {
+            background: #1572b6;
+        }
+
+
+        /* JavaScript */
+
+        .js-icon {
+            color: #111111;
+            background: #fff8cf;
+        }
+
+        .js-card::before {
+            background: #f7df1e;
+        }
+
+
+        /* MySQL */
+
+        .mysql-icon {
+            color: #00618a;
+            background: #eaf7ff;
+        }
+
+        .mysql-card::before {
+            background: #00618a;
+        }
+
+
+        /* DSA */
+
+        .dsa-icon {
+            color: #7b3ff2;
+            background: #f3edff;
+        }
+
+        .dsa-card::before {
+            background: #7b3ff2;
+        }
+
+
+        /* Full Stack */
+
+        .fullstack-icon {
+            color: #16a085;
+            background: #e9faf5;
+        }
+
+        .fullstack-card::before {
+            background: #16a085;
+        }
+
+        .skill-card h3 {
+            font-size: 17px;
+            color: #243b53;
+            position: relative;
+            z-index: 2;
+        }
+
+        .skill-card p {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+
+        /* ==============================
+           PROJECTS
+        ============================== */
+
+        .projects {
+            background: #f8fbff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+        }
+
+        .project-number {
+            color: #d9e9fb;
+            font-size: 55px;
+            font-weight: 800;
+            position: absolute;
+            right: 18px;
+            top: 5px;
+        }
+
+        .project-card h3 {
+            color: var(--dark-blue);
+            font-size: 21px;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech {
+            padding: 6px 10px;
+            background: var(--light-blue);
+            color: var(--blue);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        /* ==============================
+           EXPERIENCE
+        ============================== */
+
+        .experience-card {
+            max-width: 850px;
+            margin: auto;
+            padding: 35px;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .experience-card h3 {
+            color: var(--dark-blue);
+            font-size: 23px;
+        }
+
+        .experience-card .company {
+            color: var(--blue);
+            font-weight: 700;
+            margin: 5px 0 15px;
+        }
+
+        .experience-card p {
+            color: var(--muted);
+        }
+
+        .experience-card ul {
+            margin: 15px 0 0 20px;
+            color: var(--muted);
+        }
+
+        .experience-card li {
+            margin-bottom: 8px;
+        }
+
+
+        /* ==============================
+           EDUCATION
+        ============================== */
+
+        .education {
+            background: #f8fbff;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .education-card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .education-card i {
+            color: var(--blue);
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .education-card h3 {
+            font-size: 18px;
+            color: var(--dark-blue);
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           DETAILS
+        ============================== */
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .detail-card {
+            padding: 28px;
+            border-radius: 18px;
+            background: white;
+            border: 1px solid var(--border);
+        }
+
+        .detail-card h3 {
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .detail-card h3 i {
+            color: var(--blue);
+            margin-right: 6px;
+        }
+
+        .detail-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 2;
+        }
+
+
+        /* ==============================
+           CONTACT
+        ============================== */
+
+        .contact {
+            background: #f8fbff;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 35px;
+            align-items: stretch;
+        }
+
+        .contact-info {
+            background: var(--dark-blue);
+            color: white;
+            border-radius: 20px;
+            padding: 35px;
+        }
+
+        .contact-info h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: #c8d5e3;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: #8ec5ff;
+        }
+
+        .contact-item span {
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--blue);
+            transform: translateY(-3px);
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #dfe4ea;
+            padding: 15px 10px;
+            outline: none;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text);
+            background: transparent;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--blue);
+        }
+
+        .send-btn {
+            width: 100%;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            padding: 28px 0;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-content p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .back-top {
+            width: 42px;
+            height: 42px;
+            background: var(--dark-blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+
+        /* ==============================
+           ANIMATIONS
+        ============================== */
+
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes floating {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .profile-area {
+                padding-top: 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                height: auto;
+                padding: 18px 0;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 14px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding-top: 55px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .typing {
+                font-size: 19px;
+            }
+
+            .profile-wrapper {
+                width: 320px;
+                height: 320px;
+            }
+
+            .profile-wrapper::before {
+                width: 320px;
+                height: 320px;
+            }
+
+            .profile-wrapper::after {
+                width: 305px;
+                height: 305px;
+            }
+
+            .profile-image {
+                width: 285px;
+                height: 285px;
+            }
+
+            .location-badge {
+                right: -5px;
+                bottom: 4px;
+                font-size: 11px;
+                padding: 10px 12px;
+            }
+
+            .floating-dot {
+                right: 0;
+            }
+
+            .quick-info {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+     NAVIGATION
+============================== -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            Kalluri <span>Sabeela</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+
+</header>
+
+
+
+<!-- ==============================
+     HERO
+============================== -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <div class="small-title">
+                <i class="fa-solid fa-code"></i>
+                B.Tech CSE Student
+            </div>
+
+            <h1>
+                Hi, I'm Kalluri
+                <span>Sabeela.</span>
+            </h1>
+
+            <div class="typing">
+                Aspiring <span id="typingText"></span>
+            </div>
+
+            <p class="hero-description">
+                I'm a Computer Science student focused on Java Full Stack
+                development and DSA. I enjoy turning real-world problems
+                into simple, useful software through hands-on projects
+                and continuous learning.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="Kalluri_Sabeela_Professional_Resume.pdf"
+                   class="btn btn-primary"
+                   download>
+                    <i class="fa-solid fa-download"></i>
+                    Download Resume
+
+                </a>
+
+                <a href="#projects"
+                   class="btn btn-outline">
+
+                    <i class="fa-solid fa-folder-open"></i>
+                    View Projects
+
+                </a>
+
+                <a href="https://github.com/KALLURISABEELA"
+                   target="_blank"
+                   class="btn btn-outline">
+
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROFILE -->
+
+        <div class="profile-area">
+
+            <div class="profile-wrapper">
+
+                <div class="floating-dot"></div>
+
+                <div class="profile-image">
+
+                    <img src="images/profile.jpg"
+                         alt="Kalluri Sabeela">
+
+                </div>
+
+                <div class="location-badge">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Andhra Pradesh, India
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     ABOUT
+============================== -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="tag">About Me</div>
+
+            <h2>Who I Am</h2>
+
+            <p>
+                A Computer Science student passionate about software
+                development and problem solving.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-card">
+
+                <h3>My Journey</h3>
+
+                <p>
+                    I am currently pursuing B.Tech in Computer Science
+                    and Engineering at Madanapalle Institute of Technology
+                    & Science.
+                </p>
+
+                <p>
+                    My main focus is Java Full Stack development and
+                    Data Structures & Algorithms. I am continuously
+                    improving my programming fundamentals by building
+                    practical projects.
+                </p>
+
+                <p>
+                    I enjoy learning new technologies, working in teams,
+                    solving problems and converting ideas into useful
+                    applications.
+                </p>
+
+            </div>
+
+
+            <div class="quick-info">
+
+                <div class="info-box">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h4>Education</h4>
+                    <p>B.Tech CSE</p>
+                </div>
+
+                <div class="info-box">
+                    <i class="fa-solid fa-code"></i>
+                    <h4>Focus</h4>
+                    <p>Java Full Stack</p>
+                </div>
+
+                <div class="info-box">
+                    <i class="fa-solid fa-brain"></i>
+                    <h4>Learning</h4>
+                    <p>DSA</p>
+                </div>
+
+                <div class="info-box">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h4>Career Goal</h4>
+                    <p>Software Developer</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     TECHNOLOGIES
+============================== -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="tag">Technologies</div>
+
+            <h2>Technologies I Work With</h2>
+
+            <p>
+                Technologies and concepts I use while learning and
+                developing projects.
+            </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <!-- JAVA -->
+
+            <div class="skill-card java-card">
+
+                <div class="skill-icon java-icon">
+                    <i class="fa-brands fa-java"></i>
+                </div>
+
+                <h3>Java</h3>
+
+                <p>Programming Language</p>
+
+            </div>
+
+
+
+            <!-- DBMS -->
+
+            <div class="skill-card db-card">
+
+                <div class="skill-icon db-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <h3>DBMS</h3>
+
+                <p>Database Management</p>
+
+            </div>
+
+
+
+            <!-- HTML -->
+
+            <div class="skill-card html-card">
+
+                <div class="skill-icon html-icon">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+
+                <h3>HTML</h3>
+
+                <p>Web Structure</p>
+
+            </div>
+
+
+
+            <!-- CSS -->
+
+            <div class="skill-card css-card">
+
+                <div class="skill-icon css-icon">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+
+                <h3>CSS</h3>
+
+                <p>Web Styling</p>
+
+            </div>
+
+
+
+            <!-- JAVASCRIPT -->
+
+            <div class="skill-card js-card">
+
+                <div class="skill-icon js-icon">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+
+                <h3>JavaScript</h3>
+
+                <p>Web Programming</p>
+
+            </div>
+
+
+
+            <!-- MYSQL -->
+
+            <div class="skill-card mysql-card">
+
+                <div class="skill-icon mysql-icon">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+
+                <h3>MySQL</h3>
+
+                <p>Relational Database</p>
+
+            </div>
+
+
+
+            <!-- DSA -->
+
+            <div class="skill-card dsa-card">
+
+                <div class="skill-icon dsa-icon">
+                    <i class="fa-solid fa-diagram-project"></i>
+                </div>
+
+                <h3>DSA</h3>
+
+                <p>Problem Solving</p>
+
+            </div>
+
+
+
+            <!-- FULL STACK -->
+
+            <div class="skill-card fullstack-card">
+
+                <div class="skill-icon fullstack-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+
+                <h3>Full Stack</h3>
+
+                <p>Web Development</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     PROJECTS
+============================== -->
+
+<section class="projects" id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="tag">My Work</div>
+
+            <h2>Featured Projects</h2>
+
+            <p>
+                Practical projects developed while learning and applying
+                software development concepts.
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <div class="project-card">
+
+                <div class="project-number">01</div>
+
+                <h3>Hospital Management System</h3>
+
+                <p>
+                    A full-stack hospital management application designed
+                    to manage patients, doctors, appointments, medical
+                    records, prescriptions, billing and other hospital
+                    operations through a centralized system.
+                </p>
+
+                <div class="tech-list">
+
+                    <span class="tech">HTML</span>
+                    <span class="tech">CSS</span>
+                    <span class="tech">JavaScript</span>
+                    <span class="tech">Java</span>
+                    <span class="tech">Spring Boot</span>
+                    <span class="tech">MySQL</span>
+                    <span class="tech">React</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-card">
+
+                <div class="project-number">02</div>
+
+                <h3>Secure File Sharing System</h3>
+
+                <p>
+                    A CNIP project focused on secure file transfer between
+                    users using Java socket programming and TCP/IP.
+                    The system includes authentication, access control
+                    and security concepts for protected file sharing.
+                </p>
+
+                <div class="tech-list">
+
+                    <span class="tech">Java</span>
+                    <span class="tech">Socket Programming</span>
+                    <span class="tech">TCP/IP</span>
+                    <span class="tech">MySQL</span>
+                    <span class="tech">Authentication</span>
+                    <span class="tech">Security</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-card">
+
+                <div class="project-number">03</div>
+
+                <h3>Healthcare Decision Support Expert System</h3>
+
+                <p>
+                    An AI mini project that uses a rule-based expert system
+                    to match user-entered symptoms with possible health
+                    conditions and provide basic informational guidance.
+                    The project uses a simple graphical interface.
+                </p>
+
+                <div class="tech-list">
+
+                    <span class="tech">Python</span>
+                    <span class="tech">Rule-Based AI</span>
+                    <span class="tech">Expert System</span>
+                    <span class="tech">Tkinter</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="project-card">
+
+                <div class="project-number">04</div>
+
+                <h3>Centralized Digital Platform for Student Activity Records</h3>
+
+                <p>
+                    A platform designed to maintain student activity
+                    records such as certificates and supporting evidence
+                    in one centralized system, with access for students
+                    and parents.
+                </p>
+
+                <div class="tech-list">
+
+                    <span class="tech">Web Development</span>
+                    <span class="tech">Database</span>
+                    <span class="tech">Student Records</span>
+                    <span class="tech">Team Project</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     EXPERIENCE
+============================== -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="tag">Experience</div>
+
+            <h2>Internship</h2>
+
+        </div>
+
+
+        <div class="experience-card">
+
+            <h3>Full-Stack Development Intern</h3>
+
+            <div class="company">
+                MindMerge
+            </div>
+
+            <p>
+                Worked on full-stack development concepts and gained
+                practical exposure to building web applications.
+            </p>
+
+            <ul>
+
+                <li>
+                    Worked with frontend and backend development concepts.
+                </li>
+
+                <li>
+                    Practiced database integration and application development.
+                </li>
+
+                <li>
+                    Worked on practical software development tasks.
+                </li>
+
+                <li>
+                    Improved understanding of full-stack development workflow.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     EDUCATION
+============================== -->
+
+<section class="education" id="education">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="tag">Education</div>
+
+            <h2>Academic Background</h2>
+
+        </div>
+
+
+        <div class="education-grid">
+
+
+            <div class="education-card">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <h3>B.Tech - Computer Science & Engineering</h3>
+
+                <p>
+                    Madanapalle Institute of Technology & Science
+                </p>
+
+                <p>
+                    2024 - 2028
+                </p>
+
+                <p>
+                    Current CGPA: <strong>7.05</strong>
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <i class="fa-solid fa-school"></i>
+
+                <h3>Class XII</h3>
+
+                <p>
+                    Srinivasa Junior College,
+                    Kalikiri, Andhra Pradesh
+                </p>
+
+                <p>
+                    2022 - 2024
+                </p>
+
+                <p>
+                    Percentage: <strong>71%</strong>
+                </p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <i class="fa-solid fa-book"></i>
+
+                <h3>SSC</h3>
+
+                <p>
+                    Rayala Seema High School,
+                    Kalikiri, Andhra Pradesh
+                </p>
+
+                <p>
+                    2021 - 2022
+                </p>
+
+                <p>
+                    Percentage: <strong>85%</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     STRENGTHS
+============================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="tag">More About Me</div>
+
+            <h2>Strengths & Achievements</h2>
+
+        </div>
+
+
+        <div class="details-grid">
+
+
+            <div class="detail-card">
+
+                <h3>
+                    <i class="fa-solid fa-certificate"></i>
+                    Certifications
+                </h3>
+
+                <p>
+                    • C Programming Certification<br>
+                    • Full-Stack Development Certification
+                </p>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <h3>
+                    <i class="fa-solid fa-star"></i>
+                    Strengths
+                </h3>
+
+                <p>
+                    • Problem Solving<br>
+                    • Quick Learner<br>
+                    • Teamwork<br>
+                    • Communication<br>
+                    • Leadership<br>
+                    • Adaptability<br>
+                    • Time Management
+                </p>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <h3>
+                    <i class="fa-solid fa-trophy"></i>
+                    Achievements
+                </h3>
+
+                <p>
+                    • Participated in Smart India Hackathon (SIH) 2025<br>
+                    • Participated in gaming competitions at ASHV–2K25, MITS
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     CONTACT
+============================== -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <div class="tag">Contact</div>
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Have an opportunity or want to get in touch?
+                Send me a message.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info">
+
+                <h3>Get In Touch</h3>
+
+                <p>
+                    I am open to internships, projects,
+                    learning opportunities and professional connections.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span>
+                        sabeelakalluri@gmail.com
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <span>
+                        +91 7981261814
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        Andhra Pradesh, India
+                    </span>
+
+                </div>
+
+
+                <div class="social-links">
+
+                    <a href="https://github.com/KALLURISABEELA"
+                       target="_blank">
+
+                        <i class="fa-brands fa-github"></i>
+
+                    </a>
+
+
+                    <a href="https://www.linkedin.com/in/kalluri-sabeela-795396325"
+                       target="_blank">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contact-form">
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Your email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <textarea
+                            id="message"
+                            placeholder="Write your message..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary send-btn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==============================
+     FOOTER
+============================== -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <p>
+            © 2026 Kalluri Sabeela · Built with HTML, CSS & JavaScript
+        </p>
+
+        <a href="#home" class="back-top">
+
+            <i class="fa-solid fa-arrow-up"></i>
+
+        </a>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ==============================
+     JAVASCRIPT
+============================== -->
+
+<script>
+
+    /* TYPING EFFECT */
+
+    const typingText =
+        document.getElementById("typingText");
+
+    const words = [
+        "Software Developer",
+        "Java Full Stack Developer",
+        "Problem Solver",
+        "CSE Student"
+    ];
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+
+    function typeEffect() {
+
+        const currentWord = words[wordIndex];
+
+        if (!deleting) {
+
+            typingText.textContent =
+                currentWord.substring(0, charIndex + 1);
+
+            charIndex++;
+
+            if (charIndex === currentWord.length) {
+
+                deleting = true;
+
+                setTimeout(typeEffect, 1500);
+
+                return;
+            }
+
+        } else {
+
+            typingText.textContent =
+                currentWord.substring(0, charIndex - 1);
+
+            charIndex--;
+
+            if (charIndex === 0) {
+
+                deleting = false;
+
+                wordIndex++;
+
+                if (wordIndex === words.length) {
+                    wordIndex = 0;
+                }
+
+            }
+
+        }
+
+        setTimeout(
+            typeEffect,
+            deleting ? 55 : 90
+        );
+    }
+
+
+    typeEffect();
+
+
+
+    /* CONTACT FORM */
+
+    document
+        .getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value;
+
+            const email =
+                document.getElementById("email").value;
+
+            const message =
+                document.getElementById("message").value;
+
+
+            const subject =
+                encodeURIComponent(
+                    "Portfolio Contact from " + name
+                );
+
+
+            const body =
+                encodeURIComponent(
+                    "Name: " + name +
+                    "\nEmail: " + email +
+                    "\n\nMessage:\n" + message
+                );
+
+
+            window.location.href =
+                "mailto:sabeelakalluri@gmail.com" +
+                "?subject=" + subject +
+                "&body=" + body;
+
+        });
+
+
+
+    /* IMAGE CHECK */
+
+    const profileImage =
+        document.querySelector(".profile-image img");
+
+    profileImage.addEventListener("error", function() {
+
+        console.log(
+            "Profile image not found. Check images/profile.jpg"
+        );
+
+    });
+
+</script>
+
+</body>
+</html>
